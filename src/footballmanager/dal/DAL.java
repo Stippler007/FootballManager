@@ -51,7 +51,7 @@ public class DAL
     out.close();
     in.close();
   }
-  private List<Team> getTeams(String path) throws IOException
+  public List<Team> getTeams(String path) throws IOException
   {
     List<String> lines=getLines(path);
     List<Team> teams=new LinkedList<>();
@@ -59,11 +59,17 @@ public class DAL
     for (String line : lines)
     {
       String tokens[]=line.split("\t");
-      String name=tokens[0];
+      int number=Integer.parseInt(tokens[0]);
+      String name=tokens[2];
+      String nationality=tokens[4];
+      double koefficient[]=new double[5];
+      for (int i = 0; i < koefficient.length; i++)
+      {
+        koefficient[i]=Double.parseDouble(tokens[i+5]);;
+      }
+      Team t=new Team(name, nationality, number, koefficient);
       
-//      Team t=new Team(line, line, number, coefficient)
-      
-      
+      teams.add(t);
     }
     
     return teams;
@@ -83,8 +89,8 @@ public class DAL
   {
     try
     {
-      DAL.getDal().getLines("src/saves/gerd.txt").stream().forEach(s->System.out.println(s));
-      
+//      DAL.getDal().getLines("src/saves/gerd.txt").stream().forEach(s->System.out.println(s));
+      DAL.getDal().getTeams("src/saves/gerd.txt").stream().forEach(s->System.out.println(s));
 //    try
 //    {
 //      String link=new String("http://www.google.at");

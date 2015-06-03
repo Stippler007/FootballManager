@@ -14,9 +14,9 @@ public class Team
   private String name;
   private String nationality;
   private int number;
-  private float coefficient[];
+  private double coefficient[];
 
-  public Team(String name, String nationality, int number, float[] coefficient)
+  public Team(String name, String nationality, int number, double[] coefficient)
   {
     this.name = name;
     this.nationality = nationality;
@@ -39,9 +39,21 @@ public class Team
     return number;
   }
 
-  public float[] getCoefficient()
+  public double[] getCoefficient()
   {
     return coefficient;
+  }
+
+  @Override
+  public String toString()
+  {
+    StringBuilder sb=new StringBuilder("");
+    for (int i = 0; i < coefficient.length-1; i++)
+    {
+      sb.append(coefficient[i]).append("#");
+    }
+    sb.append(coefficient[coefficient.length-1]);
+    return String.format("%s#%s#%d#%s", name,nationality,number,sb.toString());
   }
   
   
