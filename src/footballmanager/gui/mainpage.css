@@ -2,6 +2,8 @@
  * Empty Stylesheet file.
  */
 
-.mainFxmlClass {
-
+#pane {
+    -fx-background-image: url("Championsleague.jpg");
 }
+
+
