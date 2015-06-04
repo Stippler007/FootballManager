@@ -15,7 +15,9 @@ public class Team
   private String nationality;
   private int number;
   private double coefficient[];
-
+  
+  public int pointsGroup=0;
+  
   public Team(String name, String nationality, int number, double[] coefficient)
   {
     this.name = name;

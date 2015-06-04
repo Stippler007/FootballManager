@@ -30,8 +30,21 @@ public class GameHandler
   private ObservableList<Team> gruppe8=FXCollections.observableArrayList();
   
   private List<Team> teams;
-  private Game[][] games=new Game[8][6];
+  private Game[][] games=new Game[8][12];
+  /*
+  team1 vs team2
+  team3 vs team4
   
+  team1 vs team4
+  team2 vs team3
+  
+  
+  team1 vs team2
+  team3 vs team4
+  
+  team1 vs team4
+  team2 vs team3
+  */
   
   
   public GameHandler(List<Team> teams)
@@ -51,6 +64,16 @@ public class GameHandler
       gruppe8.add(teams.get(i+4*7));
     }
   }
+  public void updatePointsFromGroup(ObservableList<Team> teams,int gruppe)
+  {
+    for (int i = 0; i < teams.size(); i++)
+    {
+      for (int j = 0; j < games[gruppe].length; j++)
+      {
+        if(games[gruppe][j].getPoints(teams.get(i))!=-1)teams.get(i).pointsGroup+=games[gruppe][j].getPoints(teams.get(i));
+      }
+    }
+  }
   public void shuffleTeams()
   {
     Collections.shuffle(teams);
@@ -60,7 +83,36 @@ public class GameHandler
   {
     
   }
-
+  /*
+  team1 vs team2
+  team3 vs team4
+  team1 vs team4
+  team2 vs team3
+  team1 vs team3
+  team2 vs team4
+  */
+  public void playGroup(ObservableList<Team> teams,int gruppe)
+  {
+    games[gruppe][0]=new Game(teams.get(0),teams.get(1));
+    games[gruppe][1]=new Game(teams.get(2),teams.get(3));
+    games[gruppe][2]=new Game(teams.get(0),teams.get(3));
+    games[gruppe][3]=new Game(teams.get(1),teams.get(2));
+    games[gruppe][4]=new Game(teams.get(0),teams.get(2));
+    games[gruppe][5]=new Game(teams.get(1),teams.get(3));
+    
+    games[gruppe][6]=new Game(teams.get(0),teams.get(1));
+    games[gruppe][7]=new Game(teams.get(2),teams.get(3));
+    games[gruppe][8]=new Game(teams.get(0),teams.get(3));
+    games[gruppe][9]=new Game(teams.get(1),teams.get(2));
+    games[gruppe][10]=new Game(teams.get(0),teams.get(2));
+    games[gruppe][11]=new Game(teams.get(1),teams.get(3));
+    
+    for (int i = 0; i < games[0].length; i++)
+    {
+      games[gruppe][i].playGame();
+    }
+    updatePointsFromGroup(teams, gruppe);
+  }
   public ObservableList<Team> getGruppe1()
   {
     return gruppe1;
@@ -113,7 +165,10 @@ public class GameHandler
         if(games[i][j]!=null)sb.append(games[i][j].toString());
       }
     }
-    
+    for (Team t:teams)
+    {
+      sb.append(t.getName()).append(": ").append(t.pointsGroup);
+    }
     return sb.toString();
   }
   
@@ -121,6 +176,7 @@ public class GameHandler
   {
     GameHandler gameHandler=new GameHandler(DAL.getDal().getTeams("src/saves/gerd.txt"));
     gameHandler.shuffleTeams();
+    gameHandler.playGroup(gameHandler.getGruppe1(), 0);
     System.out.println(gameHandler.toString());
   }
 }

@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -40,6 +41,6 @@ public class TurnierLadenGUIController implements Initializable
   
   private void onAbbrechen(ActionEvent event)
   {
-
+    ((Stage)btLaden.getScene().getWindow()).close();
   }
 }

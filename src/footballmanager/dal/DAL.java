@@ -85,29 +85,29 @@ public class DAL
     
     return lines;
   }
-  public static void main(String[] args)
-  {
-    try
-    {
-//      DAL.getDal().getLines("src/saves/gerd.txt").stream().forEach(s->System.out.println(s));
-      DAL.getDal().getTeams("src/saves/gerd.txt").stream().forEach(s->System.out.println(s));
-//    try
-//    {
-//      String link=new String("http://www.google.at");
-//      DAL.getDal().readConnection(link);
-//    }
-//    catch (FileNotFoundException ex)
-//    {
-//      Logger.getLogger(DAL.class.getName()).log(Level.SEVERE, null, ex);
-//    }
-//    catch (IOException ex)
-//    {
-//      Logger.getLogger(DAL.class.getName()).log(Level.SEVERE, null, ex);
-//    }
-    }
-    catch (IOException ex)
-    {
-      Logger.getLogger(DAL.class.getName()).log(Level.SEVERE, null, ex);
-    }
-  }
+//  public static void main(String[] args)
+//  {
+////    try
+////    {
+//////      DAL.getDal().getLines("src/saves/gerd.txt").stream().forEach(s->System.out.println(s));
+//////      DAL.getDal().getTeams("src/saves/gerd.txt").stream().forEach(s->System.out.println(s));
+//////    try
+//////    {
+//////      String link=new String("http://www.google.at");
+//////      DAL.getDal().readConnection(link);
+//////    }
+//////    catch (FileNotFoundException ex)
+//////    {
+//////      Logger.getLogger(DAL.class.getName()).log(Level.SEVERE, null, ex);
+//////    }
+//////    catch (IOException ex)
+//////    {
+//////      Logger.getLogger(DAL.class.getName()).log(Level.SEVERE, null, ex);
+//////    }
+////    }
+////    catch (IOException ex)
+////    {
+////      Logger.getLogger(DAL.class.getName()).log(Level.SEVERE, null, ex);
+////    }
+//  }
 }

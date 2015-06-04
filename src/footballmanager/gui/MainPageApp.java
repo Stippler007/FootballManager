@@ -18,7 +18,7 @@ import javafx.stage.Stage;
  */
 public class MainPageApp extends Application
 {
-
+  private static Stage primaryStage;
     public static void main(String[] args) 
     {
         launch(args);
@@ -27,15 +27,17 @@ public class MainPageApp extends Application
     @Override
     public void start(Stage primaryStage) throws Exception
     {
-        StackPane root = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
-        root.setId("pane");
-        Scene scene = new Scene(root);
-        scene.getStylesheets().addAll(this.getClass().getResource("mainpage.css").toExternalForm());
+      MainPageApp.primaryStage=primaryStage;
+      StackPane root = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
+      root.setId("pane");
+      Scene scene = new Scene(root);
+      scene.getStylesheets().addAll(this.getClass().getResource("mainpage.css").toExternalForm());
 
-        primaryStage.setScene(scene);
-        primaryStage.show();
-
+      setScene(scene);
     }
-    
-    
+    public static void setScene(Scene scene)
+    {
+      primaryStage.setScene(scene);
+      primaryStage.show();
+    }
 }
