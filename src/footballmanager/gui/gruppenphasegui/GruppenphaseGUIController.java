@@ -28,7 +28,7 @@ public class GruppenphaseGUIController implements Initializable
   private Button btGerd, btIs, btGay;
   
   @FXML
-  private TableView tvGroupA;
+  private TableView tvGroupA, tvGroupB, tvGroupC, tvGroupD, tvGroupE, tvGroupF, tvGroupG, tvGroupH;
   
   private GameHandler inv;
   
@@ -36,6 +36,7 @@ public class GruppenphaseGUIController implements Initializable
   public GruppenphaseGUIController(List<Team> teams)
   {
     inv=new GameHandler(teams);
+    
   }  
 
    
@@ -59,6 +60,14 @@ public class GruppenphaseGUIController implements Initializable
   public void initialize(URL url, ResourceBundle rb)
   {
     tvGroupA.setItems(inv.getGruppe1());
+    tvGroupB.setItems(inv.getGruppe2());
+    tvGroupB.setItems(inv.getGruppe3());
+    tvGroupB.setItems(inv.getGruppe4());
+    tvGroupB.setItems(inv.getGruppe5());
+    tvGroupB.setItems(inv.getGruppe6());
+    tvGroupB.setItems(inv.getGruppe7());
+    tvGroupB.setItems(inv.getGruppe8());
+    
     
     btGerd.setOnAction(this::onGerd);
     btIs.setOnAction(this::onIs);
