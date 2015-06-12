@@ -61,12 +61,12 @@ public class GruppenphaseGUIController implements Initializable
   {
     tvGroupA.setItems(inv.getGruppe1());
     tvGroupB.setItems(inv.getGruppe2());
-    tvGroupB.setItems(inv.getGruppe3());
-    tvGroupB.setItems(inv.getGruppe4());
-    tvGroupB.setItems(inv.getGruppe5());
-    tvGroupB.setItems(inv.getGruppe6());
-    tvGroupB.setItems(inv.getGruppe7());
-    tvGroupB.setItems(inv.getGruppe8());
+    tvGroupC.setItems(inv.getGruppe3());
+    tvGroupD.setItems(inv.getGruppe4());
+    tvGroupE.setItems(inv.getGruppe5());
+    tvGroupF.setItems(inv.getGruppe6());
+    tvGroupG.setItems(inv.getGruppe7());
+    tvGroupH.setItems(inv.getGruppe8());
     
     
     btGerd.setOnAction(this::onGerd);

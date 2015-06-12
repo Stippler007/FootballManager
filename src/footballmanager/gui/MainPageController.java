@@ -45,14 +45,18 @@ public class MainPageController implements Initializable {
         Stage dlg=new Stage();
         
         dlg.initModality(Modality.APPLICATION_MODAL);
-        final URL url = getClass().getResource("neuesturniergui"+File.separator+"NeuesTurnierGUI.fxml");
+        final URL url = getClass().getResource("neuesturniergui/NeuesTurnierGUI.fxml");
+        System.out.println(url.getPath());
         final FXMLLoader loader=new FXMLLoader(url);
         final NeuesTurnierGUIController c = new NeuesTurnierGUIController();
         loader.setController(c);
         Scene scene = new Scene(loader.load());
         dlg.setScene(scene);
         dlg.showAndWait();
-        
+        if(c.getScene()!=null)
+        {
+          ((Stage)btLoad.getScene().getWindow()).setScene(c.getScene());
+        }
         
       } catch (IOException ex)
       {

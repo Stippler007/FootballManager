@@ -7,6 +7,7 @@ package footballmanager.gui.neuesturniergui;
 
 import footballmanager.dal.DAL;
 import footballmanager.gui.MainPageApp;
+import footballmanager.gui.gruppenphasegui.GruppenphaseGUIController;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -38,6 +39,12 @@ public class NeuesTurnierGUIController implements Initializable
   /**
    * Initializes the controller class.
    */
+  private Scene scene;
+
+    public Scene getScene() {
+        return scene;
+    }
+  
   
 
   @Override
@@ -52,11 +59,26 @@ public class NeuesTurnierGUIController implements Initializable
   private void onTextdatei(ActionEvent event)
   {
     FileChooser fc=new FileChooser();
-    
     File f=fc.showOpenDialog(btTextdatei.getScene().getWindow());
     if(f!=null)
     {
+      try {
       
+      final URL url = MainPageApp.class.getResource("gruppenphasegui/GruppenphaseGUI.fxml");
+      System.out.println(url.getPath()); 
+      final FXMLLoader loader=new FXMLLoader(url);
+      
+      final GruppenphaseGUIController c = new GruppenphaseGUIController(DAL.getDal().getTeams(f.getAbsolutePath()));
+      loader.setController(c);
+      scene = new Scene(loader.load());
+      ((Stage)btAbbrechen.getScene().getWindow()).close();
+
+//    
+
+      } 
+      catch (IOException ex) {
+        Logger.getLogger(NeuesTurnierGUIController.class.getName()).log(Level.SEVERE, null, ex);
+      }
     }
   }
   
