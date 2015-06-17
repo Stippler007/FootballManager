@@ -129,38 +129,6 @@ public class GameHandler
     }
     updatePointsFromGroup(teams, gruppe);
   }
-  public ObservableList<Team> getGruppe1()
-  {
-    return gruppe1;
-  }
-  public ObservableList<Team> getGruppe2()
-  {
-    return gruppe2;
-  }
-  public ObservableList<Team> getGruppe3()
-  {
-    return gruppe3;
-  }
-  public ObservableList<Team> getGruppe4()
-  {
-    return gruppe4;
-  }
-  public ObservableList<Team> getGruppe5()
-  {
-    return gruppe5;
-  }
-  public ObservableList<Team> getGruppe6()
-  {
-    return gruppe6;
-  }
-  public ObservableList<Team> getGruppe7()
-  {
-    return gruppe7;
-  }
-  public ObservableList<Team> getGruppe8()
-  {
-    return gruppe8;
-  }
 
   public List<ObservableList<Team>> getGruppen()
   {
@@ -197,7 +165,6 @@ public class GameHandler
   {
     GameHandler gameHandler=new GameHandler(DAL.getDal().getTeams("src/saves/gerd.txt"));
     gameHandler.shuffleTeams();
-    gameHandler.playGroup(gameHandler.getGruppe1(), 0);
     System.out.println(gameHandler.toString());
   }
 }

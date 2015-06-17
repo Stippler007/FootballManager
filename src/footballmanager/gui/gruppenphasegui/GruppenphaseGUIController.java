@@ -25,7 +25,7 @@ public class GruppenphaseGUIController implements Initializable
 {
 
   @FXML
-  private Button btGruppenphaseSim, btIs, btGay;
+  private Button btGruppenphaseSim;
   
   @FXML
   private TableView tvGroupA, tvGroupB, tvGroupC, tvGroupD, tvGroupE, tvGroupF, tvGroupG, tvGroupH;
@@ -45,31 +45,19 @@ public class GruppenphaseGUIController implements Initializable
     inv.playAllGames();
   }
   
-  private void onIs(ActionEvent event)
-  {
-
-  }
-  
-  private void onGay(ActionEvent event)
-  {
-
-  }
-  
   @Override
   public void initialize(URL url, ResourceBundle rb)
   {
-    tvGroupA.setItems(inv.getGruppe1());
-    tvGroupB.setItems(inv.getGruppe2());
-    tvGroupC.setItems(inv.getGruppe3());
-    tvGroupD.setItems(inv.getGruppe4());
-    tvGroupE.setItems(inv.getGruppe5());
-    tvGroupF.setItems(inv.getGruppe6());
-    tvGroupG.setItems(inv.getGruppe7());
-    tvGroupH.setItems(inv.getGruppe8());
+    tvGroupA.setItems(inv.getGruppen().get(0));
+    tvGroupB.setItems(inv.getGruppen().get(1));
+    tvGroupC.setItems(inv.getGruppen().get(2));
+    tvGroupD.setItems(inv.getGruppen().get(3));
+    tvGroupE.setItems(inv.getGruppen().get(4));
+    tvGroupF.setItems(inv.getGruppen().get(5));
+    tvGroupG.setItems(inv.getGruppen().get(6));
+    tvGroupH.setItems(inv.getGruppen().get(7));
     
     
     btGruppenphaseSim.setOnAction(this::onGruppenphaseSim);
-    btIs.setOnAction(this::onIs);
-    btGay.setOnAction(this::onGay);
   } 
 }
