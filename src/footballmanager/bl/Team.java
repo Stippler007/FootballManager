@@ -16,7 +16,11 @@ public class Team
   private int number;
   private double coefficient[];
   
-  public int pointsGroup=0;
+  private int pointsGroup=0;
+  private int gameCounter=0;
+  private int win=0;
+  private int tie=0;
+  private int loose=0;
   
   public Team(String name, String nationality, int number, double[] coefficient)
   {
@@ -30,7 +34,6 @@ public class Team
   {
     return name;
   }
-
   public String getNationality()
   {
     return nationality;
@@ -40,12 +43,54 @@ public class Team
   {
     return number;
   }
+  
+  public int getGameCounter()
+  {
+    return gameCounter;
+  }
 
   public double[] getCoefficient()
   {
     return coefficient;
   }
+  public void addpoints(int points)
+  {
+    pointsGroup+=points;
+    gameCounter++;
+    switch(points)
+    {
+      case 0:loose++;
+        break;
+      case 1:tie++;
+        break;
+      case 3:win++;
+        break;
+    }
+    
+    System.out.println("Name: "+name+" GameCounter"+": "+gameCounter);
+    System.out.println("Name: "+name+" GruppenPunkte"+": "+pointsGroup);
+  }
 
+  public int getPointsGroup()
+  {
+    return pointsGroup;
+  }
+
+  public int getLoose()
+  {
+    return loose;
+  }
+
+  public int getTie()
+  {
+    return tie;
+  }
+
+  public int getWin()
+  {
+    return win;
+  }
+  
   @Override
   public String toString()
   {

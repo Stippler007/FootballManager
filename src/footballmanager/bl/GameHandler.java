@@ -19,6 +19,7 @@ import javafx.collections.ObservableList;
  */
 public class GameHandler
 {
+  private List<ObservableList<Team>> gruppen=FXCollections.observableArrayList();
   private ObservableList<Team> gruppe1=FXCollections.observableArrayList();
   private ObservableList<Team> gruppe2=FXCollections.observableArrayList();
   private ObservableList<Team> gruppe3=FXCollections.observableArrayList();
@@ -63,6 +64,15 @@ public class GameHandler
       gruppe7.add(teams.get(i+4*6));
       gruppe8.add(teams.get(i+4*7));
     }
+    gruppen.add(gruppe1);
+    gruppen.add(gruppe2);
+    gruppen.add(gruppe3);
+    gruppen.add(gruppe4);
+    
+    gruppen.add(gruppe5);
+    gruppen.add(gruppe6);
+    gruppen.add(gruppe7);
+    gruppen.add(gruppe8);
   }
   public void updatePointsFromGroup(ObservableList<Team> teams,int gruppe)
   {
@@ -70,7 +80,10 @@ public class GameHandler
     {
       for (int j = 0; j < games[gruppe].length; j++)
       {
-        if(games[gruppe][j].getPoints(teams.get(i))!=-1)teams.get(i).pointsGroup+=games[gruppe][j].getPoints(teams.get(i));
+        if(games[gruppe][j].getPoints(teams.get(i))!=-1)
+        {
+          teams.get(i).addpoints(games[gruppe][j].getPoints(teams.get(i)));
+        }
       }
     }
   }
@@ -81,7 +94,10 @@ public class GameHandler
   
   public void playAllGames()
   {
-    
+    for (int i = 0; i < 7; i++)
+    {
+      playGroup(gruppen.get(i), i);
+    }
   }
   /*
   team1 vs team2
@@ -145,6 +161,11 @@ public class GameHandler
   {
     return gruppe8;
   }
+
+  public List<ObservableList<Team>> getGruppen()
+  {
+    return gruppen;
+  }
   
   
   
@@ -167,7 +188,7 @@ public class GameHandler
     }
     for (Team t:teams)
     {
-      sb.append(t.getName()).append(": ").append(t.pointsGroup);
+      sb.append(t.getName()).append(": ").append(t.getPointsGroup());
     }
     return sb.toString();
   }

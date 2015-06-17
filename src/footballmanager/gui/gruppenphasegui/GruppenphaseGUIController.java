@@ -25,7 +25,7 @@ public class GruppenphaseGUIController implements Initializable
 {
 
   @FXML
-  private Button btGerd, btIs, btGay;
+  private Button btGruppenphaseSim, btIs, btGay;
   
   @FXML
   private TableView tvGroupA, tvGroupB, tvGroupC, tvGroupD, tvGroupE, tvGroupF, tvGroupG, tvGroupH;
@@ -37,13 +37,12 @@ public class GruppenphaseGUIController implements Initializable
   {
     inv=new GameHandler(teams);
     
-  }  
-
-   
+  }
   
-  private void onGerd(ActionEvent event)
+  private void onGruppenphaseSim(ActionEvent event)
   {
-   
+    System.out.println("btGruppenphaseSim wurde betätigt.");
+    inv.playAllGames();
   }
   
   private void onIs(ActionEvent event)
@@ -69,7 +68,7 @@ public class GruppenphaseGUIController implements Initializable
     tvGroupH.setItems(inv.getGruppe8());
     
     
-    btGerd.setOnAction(this::onGerd);
+    btGruppenphaseSim.setOnAction(this::onGruppenphaseSim);
     btIs.setOnAction(this::onIs);
     btGay.setOnAction(this::onGay);
   } 

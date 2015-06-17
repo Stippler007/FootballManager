@@ -24,8 +24,36 @@
          <children>
             <TableView fx:id="tvGroupB" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
               <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn prefWidth="75.0" text="Namen">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="name" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="Spiele">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="gameCounter" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="S">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="win" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="U">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="tie" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="N">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="loose" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="TD">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="" /> 
+                      </cellValueFactory>
+                </TableColumn>
               </columns>
             </TableView>
             <TableView fx:id="tvGroupC" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
@@ -42,9 +70,9 @@
             </TableView>
             <TableView fx:id="tvGroupE" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
               <columns>
-                  <TableColumn prefWidth="75.0" text="Namen" >
+                  <TableColumn prefWidth="75.0" text="Namen">
                       <cellValueFactory>
-                          <PropertyValueFactory property="name"/> 
+                          <PropertyValueFactory property="name" /> 
                       </cellValueFactory>
                   </TableColumn>
               </columns>
@@ -89,7 +117,7 @@
          <children>
             <StackPane prefHeight="150.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="btGerd" mnemonicParsing="false" prefWidth="75.0" text="Gerd" />
+                  <Button fx:id="btGruppenphaseSim" mnemonicParsing="false" prefWidth="75.0" text="Gruppenphase simulieren" />
                </children>
             </StackPane>
             <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
