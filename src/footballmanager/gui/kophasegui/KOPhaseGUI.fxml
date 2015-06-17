@@ -8,7 +8,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <GridPane BorderPane.alignment="CENTER">
@@ -22,6 +21,9 @@
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
         </columnConstraints>
         <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -45,158 +47,158 @@
          <children>
             <StackPane prefHeight="73.0" prefWidth="67.0" GridPane.columnIndex="3" GridPane.rowIndex="8" GridPane.rowSpan="2">
                <children>
-                  <Label text="Label" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                  <Label fx:id="lbFinale1" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="8" />
                </children>
             </StackPane>
             <StackPane prefHeight="73.0" prefWidth="67.0" GridPane.columnIndex="5" GridPane.rowIndex="8" GridPane.rowSpan="2">
                <children>
-                  <Label text="Label" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                  <Label fx:id="lbFinale2" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="8" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="4" GridPane.rowIndex="6">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbSieger" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="8" GridPane.rowIndex="16">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbAchtelfinale16" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="1" GridPane.rowIndex="11">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbViertelfinale3" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="1" GridPane.rowIndex="6">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbViertelfinale2" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbViertelfinale1" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.rowIndex="16">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbAchtelfinale8" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.rowIndex="14">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbAchtelfinale7" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.rowIndex="12">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbAchtelfinale6" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.rowIndex="10">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbAchtelfinale5" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.rowIndex="7">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbAchtelfinale4" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.rowIndex="5">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbAchtelfinale3" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.rowIndex="3">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbAchtelfinale2" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="8" GridPane.rowIndex="14">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbAchtelfinale15" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="8" GridPane.rowIndex="12">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbAchtelfinale14" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="8" GridPane.rowIndex="10">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbAchtelfinale13" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="8" GridPane.rowIndex="7">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbAchtelfinale12" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="8" GridPane.rowIndex="5">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbAchtelfinale11" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="8" GridPane.rowIndex="3">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbAchtelfinale10" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="8" GridPane.rowIndex="1">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbAchtelfinale9" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="1" GridPane.rowIndex="15">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbViertelfinale4" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="6" GridPane.rowIndex="4">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbHalbfinale3" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="2" GridPane.rowIndex="12">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbHalbfinale2" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="2" GridPane.rowIndex="4">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbHalbfinale1" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="7" GridPane.rowIndex="6">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbViertelfinale6" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="7" GridPane.rowIndex="2">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbViertelfinale5" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="7" GridPane.rowIndex="11">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbViertelfinale7" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="7" GridPane.rowIndex="15">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbViertelfinale8" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <Label text="Label" GridPane.columnIndex="11" GridPane.rowIndex="7" />
             <StackPane GridPane.rowIndex="1">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbAchtelfinale1" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
             <StackPane GridPane.columnIndex="6" GridPane.rowIndex="13">
                <children>
-                  <Label text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label fx:id="lbHalbfinale4" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                </children>
             </StackPane>
          </children>
