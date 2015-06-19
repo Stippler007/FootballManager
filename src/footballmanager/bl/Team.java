@@ -5,6 +5,8 @@
  */
 package footballmanager.bl;
 
+import javafx.beans.property.SimpleIntegerProperty;
+
 /**
  *
  * @author Christian
@@ -17,7 +19,7 @@ public class Team
   private double coefficient[];
   
   private int pointsGroup=0;
-  private int gameCounter=0;
+  private SimpleIntegerProperty gameCounter=new SimpleIntegerProperty(0);
   private int win=0;
   private int tie=0;
   private int loose=0;
@@ -46,7 +48,7 @@ public class Team
   
   public int getGameCounter()
   {
-    return gameCounter;
+    return gameCounter.get();
   }
 
   public double[] getCoefficient()
@@ -56,7 +58,7 @@ public class Team
   public void addpoints(int points)
   {
     pointsGroup+=points;
-    gameCounter++;
+    gameCounter.set(gameCounter.get()+1);
     switch(points)
     {
       case 0:loose++;

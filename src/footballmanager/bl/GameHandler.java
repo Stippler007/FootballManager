@@ -20,15 +20,7 @@ import javafx.collections.ObservableList;
 public class GameHandler
 {
   private List<ObservableList<Team>> gruppen=FXCollections.observableArrayList();
-  private ObservableList<Team> gruppe1=FXCollections.observableArrayList();
-  private ObservableList<Team> gruppe2=FXCollections.observableArrayList();
-  private ObservableList<Team> gruppe3=FXCollections.observableArrayList();
-  private ObservableList<Team> gruppe4=FXCollections.observableArrayList();
   
-  private ObservableList<Team> gruppe5=FXCollections.observableArrayList();
-  private ObservableList<Team> gruppe6=FXCollections.observableArrayList();
-  private ObservableList<Team> gruppe7=FXCollections.observableArrayList();
-  private ObservableList<Team> gruppe8=FXCollections.observableArrayList();
   
   private List<Team> teams;
   private Game[][] games=new Game[8][12];
@@ -51,7 +43,15 @@ public class GameHandler
   public GameHandler(List<Team> teams)
   {
     this.teams=teams;
-    
+    ObservableList<Team> gruppe1=FXCollections.observableArrayList();
+    ObservableList<Team> gruppe2=FXCollections.observableArrayList();
+    ObservableList<Team> gruppe3=FXCollections.observableArrayList();
+    ObservableList<Team> gruppe4=FXCollections.observableArrayList();
+  
+    ObservableList<Team> gruppe5=FXCollections.observableArrayList();
+    ObservableList<Team> gruppe6=FXCollections.observableArrayList();
+    ObservableList<Team> gruppe7=FXCollections.observableArrayList();
+    ObservableList<Team> gruppe8=FXCollections.observableArrayList();
     for (int i=0;i<4;i++)
     {
       gruppe1.add(teams.get(i));
