@@ -316,7 +316,7 @@
             </StackPane>
             <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
                <children>
-                  <Button fx:id="btIs" mnemonicParsing="false" prefWidth="75.0" text="is" />
+                  <Button fx:id="btKoPhase" mnemonicParsing="false" prefWidth="75.0" text="Ko Phase" />
                </children>
             </StackPane>
             <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">

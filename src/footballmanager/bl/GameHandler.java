@@ -72,6 +72,20 @@ public class GameHandler
   {
     Collections.shuffle(teams);
   }
+  public void sortTeams()
+  {
+    for (ObservableList<Team> obs : gruppen)
+    {
+      Team t=obs.get(0);
+      for (int i = 1; i < gruppen.size(); i++)
+      {
+        for (int j = 2; j < games.length; j++)
+        {
+          
+        }
+      }
+    }
+  }
   public void update()
   {
     gruppe1.clear();
