@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.chart.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
@@ -204,4 +205,15 @@
          </children>
       </GridPane>
    </center>
+   <top>
+      <StackPane prefHeight="51.0" prefWidth="66.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="43.0" prefWidth="136.0" text="KO-Phase">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+   </top>
 </BorderPane>
