@@ -170,7 +170,7 @@ public class GameHandler
     }
     for (Team t:teams)
     {
-      sb.append(t.getName()).append(": ").append(t.getPointsGroup());
+      sb.append(t.getName()).append(": ").append(t.getPointsGroup()+"\n");
     }
     return sb.toString();
   }
@@ -179,6 +179,7 @@ public class GameHandler
   {
     GameHandler gameHandler=new GameHandler(DAL.getDal().getTeams("src/saves/gerd.txt"));
     gameHandler.shuffleTeams();
+    gameHandler.playAllGames();
     System.out.println(gameHandler.toString());
   }
 }
