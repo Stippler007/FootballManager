@@ -86,6 +86,34 @@ public class Game
     return -1;
   }
   
+  public int getGetScoredGoals(Team t)
+  {
+      if(t.equals(team1))
+      {
+          return scoreTeam1;
+      }
+      else if(t.equals(team2))
+      {
+          return scoreTeam2;
+      }
+      
+      return 0;
+  }
+  
+  public int getCleanSheets(Team t)
+  {
+     if(t.equals(team1))
+      {
+          return scoreTeam2;
+      }
+      else if(t.equals(team2))
+      {
+          return scoreTeam1;
+      }
+      
+      return 0; 
+  }
+  
   @Override
   public String toString()
   {

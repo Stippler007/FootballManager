@@ -23,6 +23,9 @@ public class Team
   private int win=0;
   private int tie=0;
   private int loose=0;
+  private int scoredGoals=0;
+  private int cleanSheets=0;
+  
   
   public Team(String name, String nationality, int number, double[] coefficient)
   {
@@ -30,6 +33,16 @@ public class Team
     this.nationality = nationality;
     this.number = number;
     this.coefficient = coefficient;
+  }
+  
+  public int getScoredGoals()
+  {
+      return scoredGoals;
+  }
+  
+  public int getCleanSheets()
+  {
+      return cleanSheets;
   }
 
   public String getName()
