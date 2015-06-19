@@ -20,15 +20,17 @@ import javafx.collections.ObservableList;
 public class GameHandler
 {
   private List<ObservableList<Team>> gruppen=FXCollections.observableArrayList();
-  private ObservableList<Team> gruppe1=FXCollections.observableArrayList();
-  private ObservableList<Team> gruppe2=FXCollections.observableArrayList();
-  private ObservableList<Team> gruppe3=FXCollections.observableArrayList();
-  private ObservableList<Team> gruppe4=FXCollections.observableArrayList();
   
-  private ObservableList<Team> gruppe5=FXCollections.observableArrayList();
-  private ObservableList<Team> gruppe6=FXCollections.observableArrayList();
-  private ObservableList<Team> gruppe7=FXCollections.observableArrayList();
-  private ObservableList<Team> gruppe8=FXCollections.observableArrayList();
+  
+    ObservableList<Team> gruppe1=FXCollections.observableArrayList();
+    ObservableList<Team> gruppe2=FXCollections.observableArrayList();
+    ObservableList<Team> gruppe3=FXCollections.observableArrayList();
+    ObservableList<Team> gruppe4=FXCollections.observableArrayList();
+  
+    ObservableList<Team> gruppe5=FXCollections.observableArrayList();
+    ObservableList<Team> gruppe6=FXCollections.observableArrayList();
+    ObservableList<Team> gruppe7=FXCollections.observableArrayList();
+    ObservableList<Team> gruppe8=FXCollections.observableArrayList();
   
   private List<Team> teams;
   private Game[][] games=new Game[8][12];
@@ -51,6 +53,36 @@ public class GameHandler
   public GameHandler(List<Team> teams)
   {
     this.teams=teams;
+    update();
+  }
+  public void updatePointsFromGroup(ObservableList<Team> teams,int gruppe)
+  {
+    for (int i = 0; i < teams.size(); i++)
+    {
+      for (int j = 0; j < games[gruppe].length; j++)
+      {
+        if(games[gruppe][j].getPoints(teams.get(i))!=-1)
+        {
+          teams.get(i).addpoints(games[gruppe][j].getPoints(teams.get(i)));
+        }
+      }
+    }
+  }
+  public void shuffleTeams()
+  {
+    Collections.shuffle(teams);
+  }
+  public void update()
+  {
+    gruppe1.clear();
+    gruppe2.clear();
+    gruppe3.clear();
+    gruppe4.clear();
+    gruppe5.clear();
+    gruppe6.clear();
+    gruppe7.clear();
+    gruppe8.clear();
+    gruppen.clear();
     
     for (int i=0;i<4;i++)
     {
@@ -74,24 +106,6 @@ public class GameHandler
     gruppen.add(gruppe7);
     gruppen.add(gruppe8);
   }
-  public void updatePointsFromGroup(ObservableList<Team> teams,int gruppe)
-  {
-    for (int i = 0; i < teams.size(); i++)
-    {
-      for (int j = 0; j < games[gruppe].length; j++)
-      {
-        if(games[gruppe][j].getPoints(teams.get(i))!=-1)
-        {
-          teams.get(i).addpoints(games[gruppe][j].getPoints(teams.get(i)));
-        }
-      }
-    }
-  }
-  public void shuffleTeams()
-  {
-    Collections.shuffle(teams);
-  }
-  
   public void playAllGames()
   {
     for (int i = 0; i < 7; i++)

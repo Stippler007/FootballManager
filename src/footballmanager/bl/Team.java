@@ -5,6 +5,8 @@
  */
 package footballmanager.bl;
 
+import javafx.beans.property.SimpleIntegerProperty;
+
 /**
  *
  * @author Christian
