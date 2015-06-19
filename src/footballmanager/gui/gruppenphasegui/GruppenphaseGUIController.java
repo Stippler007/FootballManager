@@ -43,8 +43,9 @@ public class GruppenphaseGUIController implements Initializable
   {
     System.out.println("btGruppenphaseSim wurde betätigt.");
     inv.playAllGames();
+    inv.update();
+    btGruppenphaseSim.setDisable(false);
   }
-  
   @Override
   public void initialize(URL url, ResourceBundle rb)
   {
