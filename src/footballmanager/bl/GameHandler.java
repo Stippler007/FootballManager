@@ -8,6 +8,7 @@ package footballmanager.bl;
 import footballmanager.dal.DAL;
 import java.io.IOException;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -188,7 +189,47 @@ public class GameHandler
     }
     return sb.toString();
   }
-  
+  public List<Team> getPrometedTeams()
+  {
+    List<Team> gewinner=new LinkedList<>();
+    List<Team> zweitGewinner=new LinkedList<>();
+    List<Team> promotedTeam=new LinkedList<>();
+    
+    for (ObservableList<Team> listTeam:gruppen)
+    {
+      Team strongest=listTeam.get(0);
+      for (int i = 1; i < listTeam.size(); i++)
+      {
+        if(strongest.getPointsGroup()<listTeam.get(i).getPointsGroup())
+        {
+          strongest=listTeam.get(i);
+        }
+      }
+      gewinner.add(strongest);
+      listTeam.remove(strongest);
+    }
+    
+    for (ObservableList<Team> listTeam:gruppen)
+    {
+      Team strongest=listTeam.get(0);
+      for (int i = 1; i < listTeam.size(); i++)
+      {
+        if(strongest.getPointsGroup()<listTeam.get(i).getPointsGroup())
+        {
+          strongest=listTeam.get(i);
+        }
+      }
+      zweitGewinner.add(strongest);
+    }
+    Collections.shuffle(gewinner);
+    Collections.shuffle(zweitGewinner);
+    for (int i = 0; i < gewinner.size(); i++)
+    {
+      promotedTeam.add(gewinner.get(i));
+      promotedTeam.add(zweitGewinner.get(i));
+    }
+    return promotedTeam;
+  }
   public static void main(String[] args) throws IOException
   {
     GameHandler gameHandler=new GameHandler(DAL.getDal().getTeams("src/saves/gerd.txt"));

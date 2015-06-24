@@ -68,7 +68,7 @@ public class GruppenphaseGUIController implements Initializable
       System.out.println(url.getPath());
       final FXMLLoader loader=new FXMLLoader(url);
       
-      final KOPhaseGUIController c = new KOPhaseGUIController();
+      final KOPhaseGUIController c = new KOPhaseGUIController(inv.getPrometedTeams());
       loader.setController(c);
       Scene scene = new Scene(loader.load());
       ((Stage)btGruppenphaseSim.getScene().getWindow()).setScene(scene);

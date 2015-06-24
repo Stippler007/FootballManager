@@ -216,4 +216,7 @@
          </children>
       </StackPane>
    </top>
+   <bottom>
+      <Button fx:id="btPlay" mnemonicParsing="false" text="Play all rounds!" BorderPane.alignment="CENTER" />
+   </bottom>
 </BorderPane>

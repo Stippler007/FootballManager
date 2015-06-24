@@ -5,9 +5,15 @@
  */
 package footballmanager.gui.kophasegui;
 
+import footballmanager.bl.Team;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
 /**
  * FXML Controller class
@@ -15,13 +21,32 @@ import javafx.fxml.Initializable;
  * @author Michael
  */
 public class KOPhaseGUIController implements Initializable {
+  
+  @FXML
+  private Button btPlay;
+  
+  @FXML
+  private Label lbAchtelfinale1,lbAchtelfinale2;
+  
+  private List<Team> teams;
 
-    /**
-     * Initializes the controller class.
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+  public KOPhaseGUIController(List<Team> teams)
+  {
+    this.teams=teams;
+  }
+  
+  private void onPlay(ActionEvent event)
+  {
+    
+  }
+  
+  @Override
+  public void initialize(URL url, ResourceBundle rb) 
+  {
+      btPlay.setOnAction(this::onPlay);
+      
+      lbAchtelfinale1.setText(teams.get(0).getName());
+      lbAchtelfinale2.setText(teams.get(1).getName());
+  }    
     
 }
