@@ -42,7 +42,8 @@ public class NeuesTurnierGUIController implements Initializable
   private Scene scene;
 
     public Scene getScene() {
-        return scene;
+      scene.getStylesheets().addAll(this.getClass().getResource("neuesturniergui.css").toExternalForm());  
+      return scene;
     }
   
   
