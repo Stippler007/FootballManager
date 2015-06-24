@@ -32,7 +32,7 @@ public class MainPageApp extends Application
       root.setId("pane");
       Scene scene = new Scene(root);
       scene.getStylesheets().addAll(this.getClass().getResource("mainpage.css").toExternalForm());
-
+      
       setScene(scene);
     }
     public static void setScene(Scene scene)
