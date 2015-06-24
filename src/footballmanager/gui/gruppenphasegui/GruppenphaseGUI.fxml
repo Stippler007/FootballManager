@@ -22,6 +22,40 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
+             <TableView fx:id="tvGroupA" prefHeight="200.0" prefWidth="200.0">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="Namen">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="name" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="Spiele">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="gameCounter" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="S">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="win" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="U">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="tie" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="N">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="loose" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="P">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="pointsGroup" /> 
+                      </cellValueFactory>
+                </TableColumn>
+               </columns>
+            </TableView>
             <TableView fx:id="tvGroupB" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
               <columns>
                 <TableColumn prefWidth="75.0" text="Namen">
@@ -49,23 +83,79 @@
                           <PropertyValueFactory property="loose" /> 
                       </cellValueFactory>
                 </TableColumn>
-                <TableColumn prefWidth="75.0" text="TD">
+                <TableColumn prefWidth="75.0" text="P">
                       <cellValueFactory>
-                          <PropertyValueFactory property="" /> 
+                          <PropertyValueFactory property="pointsGroup" /> 
                       </cellValueFactory>
                 </TableColumn>
               </columns>
             </TableView>
             <TableView fx:id="tvGroupC" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
               <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn prefWidth="75.0" text="Namen">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="name" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="Spiele">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="gameCounter" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="S">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="win" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="U">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="tie" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="N">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="loose" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="P">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="pointsGroup" /> 
+                      </cellValueFactory>
+                </TableColumn>
               </columns>
             </TableView>
             <TableView fx:id="tvGroupD" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
               <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn prefWidth="75.0" text="Namen">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="name" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="Spiele">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="gameCounter" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="S">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="win" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="U">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="tie" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="N">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="loose" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                 <TableColumn prefWidth="75.0" text="P">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="pointsGroup" /> 
+                      </cellValueFactory>
+                </TableColumn>
               </columns>
             </TableView>
             <TableView fx:id="tvGroupE" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
@@ -74,33 +164,137 @@
                       <cellValueFactory>
                           <PropertyValueFactory property="name" /> 
                       </cellValueFactory>
-                  </TableColumn>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="Spiele">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="gameCounter" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="S">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="win" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="U">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="tie" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="N">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="loose" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                 <TableColumn prefWidth="75.0" text="P">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="pointsGroup" /> 
+                      </cellValueFactory>
+                </TableColumn>
               </columns>
             </TableView>
             <TableView fx:id="tvGroupF" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
               <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn prefWidth="75.0" text="Namen">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="name" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="Spiele">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="gameCounter" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="S">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="win" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="U">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="tie" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="N">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="loose" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="P">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="pointsGroup" /> 
+                      </cellValueFactory>
+                </TableColumn>
               </columns>
             </TableView>
             <TableView fx:id="tvGroupG" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
               <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn prefWidth="75.0" text="Namen">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="name" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="Spiele">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="gameCounter" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="S">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="win" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="U">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="tie" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="N">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="loose" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="P">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="pointsGroup" /> 
+                      </cellValueFactory>
+                </TableColumn>
               </columns>
             </TableView>
             <TableView fx:id="tvGroupH" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
               <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn prefWidth="75.0" text="Namen">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="name" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="Spiele">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="gameCounter" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="S">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="win" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="U">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="tie" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="N">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="loose" /> 
+                      </cellValueFactory>
+                </TableColumn>
+                 <TableColumn prefWidth="75.0" text="P">
+                      <cellValueFactory>
+                          <PropertyValueFactory property="pointsGroup" /> 
+                      </cellValueFactory>
+                </TableColumn>
               </columns>
             </TableView>
-            <TableView fx:id="tvGroupA" prefHeight="200.0" prefWidth="200.0">
-               <columns>
-                  <TableColumn prefWidth="75.0" text="C1" />
-                  <TableColumn prefWidth="75.0" text="C2" />
-               </columns>
-            </TableView>
+            
          </children>
       </GridPane>
    </center>
@@ -122,7 +316,7 @@
             </StackPane>
             <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
                <children>
-                  <Button fx:id="btIs" mnemonicParsing="false" prefWidth="75.0" text="is" />
+                  <Button fx:id="btKoPhase" mnemonicParsing="false" prefWidth="75.0" text="Ko Phase" />
                </children>
             </StackPane>
             <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
